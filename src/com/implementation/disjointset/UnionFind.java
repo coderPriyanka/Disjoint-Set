@@ -46,6 +46,9 @@ public class UnionFind {
 	}
 	
 	public int find(int element) {
+		if(element != id[element]) {
+			id[element] = find(id[element]);
+		}
 		return id[element];
 	}
 	
